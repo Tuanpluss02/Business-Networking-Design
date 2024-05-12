@@ -1,30 +1,7 @@
 # GIỚI THIỆU CHUNG
 
-## 1. Đề tài tiểu luận
-
 Thiết kế xây dựng mạng LAN cho doanh nghiệp có nhiều tầng. Sử dụng dải địa chỉ 192.168.30.0/24 để chia cho toàn bộ hệ thống khoảng 230 máy tính sử dụng.
 
-## 2. Mục đích và mục tiêu thực hiện đề tài
-
-Trong thời buổi kinh tế thị trường hiện nay việc ứng dụng công nghệ thông tin để phục vụ cho việc quản lý, trao đổi, lưu trữ thông tin, dữ liệu trong một tổ chức, công ty là một điều tất yếu. Vì vậy, việc xây dựng hạ tầng mạng LAN là đều rất quan trọng trong một tổ chức hay doanh nghiệp.
-
-Việc xây dựng một hạ tầng mạng tốt giúp các nhân viên trong tổ chức, doanh nghiệp truy nhập dữ liệu một cách thuận tiện với tốc độ cao, kịp thời cập nhật, trao đổi thông tin dữ liệu nhanh chóng. Bên cạnh đó, hệ thống mạng LAN tốt giúp cho người quản trị mạng có thể tổ chức dữ liệu, phân quyền tài nguyên dữ liệu cho từng đối tượng người sử dụng một cách hiệu quả, giúp cho các hoạt động của tổ chức, doanh nghiệp diễn ra một cách trơn tru, mang lại hiệu quả kinh tế cao.
-
-Ngoài ra, việc xây dựng một mạng LAN hoàn chỉnh còn giúp cho sinh viên như chúng em củng cố các kiến thức đã học, bước đầu làm quen với một mô hình mạng doanh nghiệp.
-
-Mục tiêu: Mục tiêu xuyên suốt của đề tài là vận dụng kiến thức đã có và tìm hiểu thêm những kiến thức về mạng để nghiên cứu và xây dựng hệ thống mạng LAN có thế hoạt đông một cách tốt nhất có thể.
-
-## 3. Vấn đề đặt ra của đề bài
-
-Với việc thiết kế hệ thống LAN cho doanh nghiệp có nhiều tầng, nghĩa là nhiều phòng ban khác nhau và số thiết bị khoảng 230 máy tình thì việc lựa chọn phương án thiết kế là hết sức quan trọng. Điều này ảnh hưởng trực tiếp đến sự linh hoạt và hiệu suất của hệ thống. Vì vậy trong bài tiểu luận này, em xin đưa ra bản thiết kế cho đề tài này với nội dung bao gồm:
-
-- Kịch bản xây dựng
-
-- Thiết kế kiến trúc mạng
-
-- Phương án lựa chọn thiết bị
-
-- Mô phỏng thiết kế trên phần mềm Cisco Packet Tracer
 
 # NỘI DUNG CHÍNH
 
@@ -74,7 +51,7 @@ Sử dụng một Switch Layer 3 làm Core Switch cho cả toà nhà nối đế
 
 Ngoài việc kết nối trực tiếp vào switch, ở mỗi tầng sẽ sử dụng một Access Point để phát sóng WiFi. Điều này giúp cho các thiết bị như điện thoại, máy tính bảng, Laptop hay Webcam có thể dễ dàng kết nối vào mạng mà không cần sử dụng dây.
 
-Do số lượng thiết bị mỗi phòng có thể tăng giảm nên cần sự linh hoạt trong việc gán địa chỉ IP cho các thiết bị. Vì vậy em sử dụng một DHCP Server với mục đích cấp IP động cho từng tầng. Như vậy sẽ đảm bảo ngay khi thiết bị được kết nối với mạng thông qua Switch hoặc Access Point sẽ được cấp địa chỉ IP tự động. Hơn nữa do các tầng đều sử dụng VLAN nên em sử dụng thêm một dịch vụ có tên VTP.
+Do số lượng thiết bị mỗi phòng có thể tăng giảm nên cần sự linh hoạt trong việc gán địa chỉ IP cho các thiết bị. Vì vậy sử dụng một DHCP Server với mục đích cấp IP động cho từng tầng. Như vậy sẽ đảm bảo ngay khi thiết bị được kết nối với mạng thông qua Switch hoặc Access Point sẽ được cấp địa chỉ IP tự động. Hơn nữa do các tầng đều sử dụng VLAN nên sử dụng thêm một dịch vụ có tên VTP.
 
 VTP viết tắt của từ _VLAN Trunking Protocol_ là giao thức độc quyền của Cisco hoạt động ở lớp 2 của mô hình OSI. VTP giúp cho việc cấu hình VLAN luôn đồng nhất khi thêm, xóa, sửa thông tin về VLAN trong một hệ thống mạng. Để chuyển yêu cầu lấy IP của các thiết bị đến DHCP server cần sử dụng "IP helper-address" . Và cuối cùng để định tuyến chỉ ần sử dụng câu lệnh "ip routing" trong Switch Layer 3.
 
@@ -229,7 +206,7 @@ Như vậy, trang web đã có thể truy cập được từ tất cả các th
 ![image](https://user-images.githubusercontent.com/82562559/235388058-735da690-1a54-4d15-90e7-8fb9e7bebad1.png)
 
 
-Như vậy, trang web đã hoạt động bình thường, phần code của server này đã được em chỉnh sửa lại để có giao diện như trên.
+Như vậy, trang web đã hoạt động bình thường, phần code của server này đã được chỉnh sửa lại để có giao diện như trên.
 
 ### 4.4. Cấu hình server IoT
 
@@ -250,7 +227,7 @@ Do doanh nghiêp có sử dụng webcam và một số thiết bị IoT khác n�
 ![image](https://user-images.githubusercontent.com/82562559/235388091-9f7cf15a-48fe-4cb8-9807-83ce94b4497a.png)
 
 
-- Truy cập vào tên miền vừa thêm, trang đăng nhập hiện ra, ấn _Sign up now_ để tạo một user mới. Ở đây em để cả username và password là "cisco".
+- Truy cập vào tên miền vừa thêm, trang đăng nhập hiện ra, ấn _Sign up now_ để tạo một user mới. Ở đây để cả username và password là "cisco".
 
 ![image](https://user-images.githubusercontent.com/82562559/235388102-fa0f8e23-fca1-4196-855c-1a6774010082.png)
 
@@ -293,29 +270,3 @@ Sau khi hoàn thành đủ các bước, có thể thấy các webcam đã hoạ
 ![image](https://user-images.githubusercontent.com/82562559/235388163-ed32100d-aae0-4ba7-be94-28cc1d98ba64.png)
 
 Như vậy PC kia đã nhận được email, hoàn thành thiết lập dịch vụ email cho công ty.
-
-# PHẦN 3: KẾT LUẬN
-
-Qua phần mô phòng trên phần mềm Cisco Packet Tracer, em đã hoàn thành việc mô phỏng một hệ thống mạng LAN đáp ứng đủ các yêu cầu của doanh nghiệp thông qua việc sử dụng các dịch vụ như DHCP, VLAN, DNS server, Mail server,… Việc sử dụng một Switch Layer 3 thay cho router là vì Switch Layer 3 thường có khả năng xử lý định tuyến và chuyển tiếp gói tin giống như một router, nhưng với hiệu suất tốt hơn. Trong một mạng LAN nhỏ hoặc trung bình, nếu cần thực hiện các chức năng định tuyến đơn giản và không có yêu cầu đặc biệt về bảo mật, việc sử dụng một Switch Layer 3 có thể là một lựa chọn tốt hơn so với việc sử dụng một router. Điều này có thể giúp giảm chi phí cho doanh nghiệp.
-
-Tuy nhiên, trong một mạng lớn hơn hoặc có yêu cầu bảo mật cao, router vẫn là một lựa chọn tốt hơn. Router có khả năng xử lý định tuyến phức tạp hơn, bảo mật mạng tốt hơn và có thể kết nối với các mạng khác nhau, trong khi Switch Layer 3 thường chỉ phục vụ cho một mạng LAN duy nhất.
-
-Về phạm vi của bài tiểu luận này, với yêu cầu chính tập trung vào việc thiết kế mạng phù hợp cho doanh nghiệp nên tạm thời có thể bỏ qua các dịch vụ bảo mật như Firewall hay VPN.
-
-Cuối cùng, có thể kết luận rằng việc thiết kế mạng LAN phù hợp cho doanh nghiệp là một công việc quan trọng và phức tạp, đòi hỏi sự tập trung và chú ý đến nhiều yếu tố khác nhau. Tuy nhiên, việc đầu tư thời gian và nỗ lực để thiết kế một hệ thống mạng LAN tốt sẽ giúp cho doanh nghiệp đạt được hiệu quả và hiệu suất tốt hơn trong hoạt động kinh doanh của mình.
-
-# PHẦN 4: TÀI LIỆU THAM KHẢO
-
-#
-
-[1] [https://www.youtube.com/watch?v=s5t\_iYOEX5M](https://www.youtube.com/watch?v=s5t_iYOEX5M)
-
-[2] [https://www.youtube.com/watch?v=\_sr9yTw20FU](https://www.youtube.com/watch?v=_sr9yTw20FU)
-
-[3] [https://www.youtube.com/watch?v=Pv7Oo6eqNRo](https://www.youtube.com/watch?v=Pv7Oo6eqNRo)
-
-[4] [https://www.youtube.com/watch?v=\_BVvXph43aM](https://www.youtube.com/watch?v=_BVvXph43aM)
-
-[5] [https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr\_dhcp/configuration/15-sy/dhcp-15-sy-book/dhcp-relay-agent.html](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_dhcp/configuration/15-sy/dhcp-15-sy-book/dhcp-relay-agent.html)
-
-[6] [https://timigate.com/2018/08/configure-cisco-dhcp-relay-agents-using-packet-tracer-in-two-minutes.html](https://timigate.com/2018/08/configure-cisco-dhcp-relay-agents-using-packet-tracer-in-two-minutes.html)
